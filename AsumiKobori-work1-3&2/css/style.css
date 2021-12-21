@@ -17,10 +17,12 @@ ul {
 }
 
 .all {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 ul {
@@ -33,4 +35,21 @@ li + li {
 
 li {
     padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .all {
+        display: block;
+    }
+    ul {
+        display: block;
+    }
+
+    li + li {
+        border-left: none;
+    }
+
+    li {
+        border-bottom: 1px solid black;
+    }
 }
